@@ -81,5 +81,5 @@
 
 ---
 **GitHub 仓库地址:** [https://github.com/zmmm2/gj](https://github.com/zmmm2/gj)
-**作者:** Manus AI
+**作者:** 童年QQ：1895145
 **日期:** 2025年10月30日
