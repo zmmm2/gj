@@ -11,19 +11,19 @@ function but(){
         }
     }
 
-    function log(user,pwd,value){
+    function log(user,pass,value){
         $.ajax({
-            url: "./Ajax.php?act=login",
+            url: "./register_Ajax.php",
             type: "POST",
-            data: {"user":user,"pwd":pwd},
+            data: {"user":user,"pass":pass},
             dataType: "json",
             error: function(error){
-                value.innerHTML = '<span class="text">error，服务器连接失败</span>';
+                value.innerHTML = '<span class="text">error，服务器连接失败<span>';
             },
             success: function(data){
                 if(data.code === true){
                     value.innerHTML = '<span class="text">'+data.msg+'</span>';
-                    setTimeout('window.location.replace("./index.php")',1000);
+                    setTimeout('window.location.replace("./login.html")',1000);
                 }else{
                     value.innerHTML = '<span class="text">'+data.msg+'</span>';
                 }
@@ -36,6 +36,6 @@ function but(){
         value.innerHTML = "";
     }
 
-    function reg(){
-        window.location.href=" ../Web/register.html";
+    function logs(){
+        window.location.href="../Web/login.html";
     }
