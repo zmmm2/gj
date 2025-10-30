@@ -1,0 +1,43 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="Button">
+<ppt>width=-1
+height=-2
+text=每日签到
+background=#FF444444
+layout_marginTop=5dp
+textColor=#ffffff
+layout_marginTop=10dp
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginBottom=10dp</ppt>
+<event><eventItme type="clicki">s user=sss.user
+s pass=sss.pass
+//上面配置你的信息
+t()
+{
+  ss("http://iap.mx1.ltd/sign.php?admin="+sss.admin+"&user="+user+"&pass="+sss.pass,url)
+  hs(url,url)
+  ufnsui()
+  {
+    tw(url)
+  }
+}</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">sss admin="变量-后台账号-变量"
+//后台账号已经自动配置完毕
+sss user="用户账号"
+sss pass="用户密码"
+//用户账号用户密码必须配置</eventItme></UIEventset>

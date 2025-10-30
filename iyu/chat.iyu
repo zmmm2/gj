@@ -1,0 +1,242 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=聊天室
+layout_marginBottom=5dp
+layout_marginLeft=15dp
+textSize=20sp
+textColor=#000000
+textStyle=bold
+</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="8" did="6" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+</ppt>
+<event></event>
+</View>
+<View id="7" did="8" type="ListView">
+<ppt>width=-1
+height=-1
+dividerHeight=0
+ut_above=9</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=bottom
+ut_alignParentBottom=true
+BackgroundColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="14" did="9" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="10" did="14" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="12" did="10" type="LinearLayout">
+<ppt>ut_alignParentRight=true
+height=-1
+gravity=center
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="11" did="12" type="Button">
+<ppt>width=60dp
+height=40dp
+text=发言
+background=white
+textStyle=bold
+gravity=center
+</ppt>
+<event><eventItme type="clicki">t()
+{
+  ug(13,"text",content)
+  sr(content,"\n","&lt;br&gt;",content)
+  f(content=="")
+  {
+    ufnsui()
+    {
+      tw("请输入完整")
+    }
+  }
+else
+{
+  ss("http://iap.mx1.ltd/chat.php?admin="+sss.admin+"&user="+sss.user+"&pass="+sss.pass+"&content="+content,url)
+  hs(url,urls)
+f(urls?"成功")
+{
+  ufnsui()
+  {
+    us(13,"text","")
+    tw(urls)
+    }
+  
+  ss("http://iap.mx1.ltd/echouser.php?file=chat&admin="+sss.admin,url)
+hs(url,url)
+sj(url,"[",null,url)
+sl(url,"[",a)
+for(a;a)
+{
+  sj(a,"#","|",name)
+  sj(a,"|","||",content)
+  sr(content,"&lt;br&gt;","\n",content)
+  sj(a,"||","]",time)
+  ula(as,12=name,15=content,17=time,-1=id)
+  ufnsui()
+{
+uls(7, as, "chatlist.iyu", -1, -2)
+us(7,"selection","bottom")
+}
+}
+  }
+else f(urls==null)
+{
+  ufnsui()
+  {
+    tw("网络错误")
+  }
+}
+
+else
+{
+  ufnsui()
+  {
+    tw(urls)
+  }
+}
+}
+}</eventItme></event>
+</View>
+<View id="13" did="10" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+hint=输入内容
+ut_toLeftOf=12
+layout_marginLeft=10dp
+maxLength=1000</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+sss admin="变量-后台账号-变量"
+//后台账号已经自动配置完毕
+sss user="用户账号"
+sss pass="用户密码"
+//用户账号用户密码必须配置
+
+
+
+
+
+
+
+
+
+
+
+
+
+//下面的不要去改
+t()
+{
+ss("http://iap.mx1.ltd/echouser.php?file=chat&admin="+sss.admin,url)
+hs(url,url)
+f(url?"[")
+{
+sj(url,"[",null,url)
+sl(url,"[",a)
+for(a;a)
+{
+  sj(a,"#","|",name)
+  sj(a,"|","||",content)
+  sr(content,"&lt;br&gt;","\n",content)
+  sj(a,"||","]",time)
+  sj(a,null,"#",id)
+  ula(as,12=name,15=content,17=time,-1=id)
+  ufnsui()
+{
+uls(7, as, "chatlist.iyu", -1, -2)
+us(7,"selection","bottom")
+}
+}
+}
+else f(url?"不存在"||url=="")
+{
+  time(2,time)
+  time(3,times)
+  ss(time+" "+times,time)
+  ssg(time,0,16,time)
+  ula(as,12="小蜜蜂",15="暂无发言，赶紧成为第一个发言者吧!",17=time,-1=id)
+  ufnsui()
+{
+uls(7, as, "chatlist.iyu", -1, -2)
+us(7,"selection","bottom")
+}
+}
+else
+{
+  time(2,time)
+  time(3,times)
+  ss(time+" "+times,time)
+  ssg(time,0,16,time)
+  ula(as,12="小蜜蜂",15="网络出现错误",17=time,-1=id)
+  ufnsui()
+{
+uls(7, as, "chatlist.iyu", -1, -2)
+us(7,"selection","bottom")
+}
+}
+}</eventItme><eventItme type="loadingComplete">t()
+{
+  stop(10)
+  endkeyboard()
+}</eventItme><eventItme type="restart">t()
+{
+  stop(10)
+  ufnsui()
+  {
+  
+  endkeyboard()
+  }
+}</eventItme></UIEventset>

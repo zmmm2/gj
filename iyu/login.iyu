@@ -1,0 +1,277 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="ImageView">
+<ppt>width=55dp
+height=-1
+src=@hai66.png
+padding=14dp
+backgroundripple=#ff9bd7ff</ppt>
+<event><eventItme type="clicki">
+end()</eventItme></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-1
+height=120dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=用户登陆
+textsize=25dp
+textcolor=#fe000000
+textstyle=bold
+layout_marginleft=31dp</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="LinearLayout">
+<ppt>width=-1
+height=10dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=55dp
+layout_marginleft=21dp
+layout_marginright=21dp
+layout_margintop=12dp</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+background=
+singleline=true
+hint=请输入用户名
+textsize=15dp
+textcolor=#5f000000
+textcolorhint=#5f000000
+inputtype=textvisiblepassword</ppt>
+<event></event>
+</View>
+<View id="9" did="7" type="TextView">
+<ppt>width=-1
+height=1
+text=
+ut_alignparentbottom=true
+background=#e0e0e0</ppt>
+<event></event>
+</View>
+<View id="11" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=55dp
+layout_marginleft=21dp
+layout_marginright=21dp
+layout_margintop=12dp</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+background=
+singleline=true
+hint=请输入密码
+textsize=15dp
+textcolor=#5f000000
+textcolorhint=#5f000000
+inputtype=textvisiblepassword
+layout_marginright=55dp
+</ppt>
+<event></event>
+</View>
+<View id="13" did="11" type="TextView">
+<ppt>width=-1
+height=1
+text=
+ut_alignparentbottom=true
+background=#e0e0e0</ppt>
+<event></event>
+</View>
+<View id="14" did="11" type="ImageView">
+<ppt>width=55dp
+height=-1
+src=@design_ic_visibility.png
+padding=18dp
+ut_alignparentright=true</ppt>
+<event><eventItme type="clicki">ug(15,"text",ss6)
+f(ss6=="中")
+  {
+    us(12,"inputtype","textpassword")
+    us(14,"src","@design_ic_visibility_off.png")
+    us(15,"text","英")
+  }
+else f(ss6=="英")
+  {
+    us(12,"inputtype","textvisiblepassword")
+    us(14,"src","@design_ic_visibility.png")
+    us(15,"text","中")
+  }</eventItme></event>
+</View>
+<View id="15" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=中
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="17" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="26" did="17" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+textcolor=#ff00b2ff
+typeface=serif
+textsize=13dp
+layout_margintop=5dp
+layout_marginleft=21dp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="TextView">
+<ppt>width=-2
+height=-2
+text=注册新用户
+textcolor=#ff00b2ff
+typeface=serif
+textsize=13dp
+layout_margintop=5dp
+layout_marginright=21dp</ppt>
+<event><eventItme type="clicki">
+uigo("register.iyu")</eventItme></event>
+</View>
+<View id="19" did="1" type="Button">
+<ppt>width=-1
+height=38dp
+text=登陆
+background=#ff00b2ff
+typeface=serif
+textsize=13dp
+layout_marginleft=21dp
+layout_marginright=21dp
+textcolor=#ffffff
+layout_margintop=15dp</ppt>
+<event><eventItme type="clicki">ug(8,"text",user)
+ug(12,"text",pass)
+//上面是需要配置的变量
+t()
+{
+  ss("http://iap.mx1.ltd/userlogin.php?admin="+sss.admin+"&user="+user+"&pass="+pass,url)
+  hs(url,url)
+  ufnsui()
+  {
+    tw(url)
+  }
+f(url?"成功")
+{
+  fw("$user",user)
+//保存账号
+  fw("$pass",pass)
+//保存密码
+  sss user=user
+//设置全局变量
+  sss pass=pass
+
+//-----//下面可以写跳转界面等逻辑代码
+
+
+
+
+
+
+
+
+//-----//范围请不要超过这里
+}
+}</eventItme></event>
+</View>
+<View id="20" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=bottom
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="22" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+gravity=center
+orientation=horizontal
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="21" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=登入即代表
+textsize=13sp
+textcolor=#000000</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=《Learn Bx+》
+textsize=13sp
+textcolor=#000000
+textcolor=#ff00a5ff</ppt>
+<event></event>
+</View>
+<View id="24" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=使用与安装协议
+textsize=13sp
+textcolor=#000000</ppt>
+<event></event>
+</View>
+<View id="25" did="1" type="NestedScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">sss admin="变量-后台账号-变量"
+//上方是后台账号，已经自动配置完毕
+
+
+
+
+
+
+
+
+uycl("#ffffff",true)
+ngde(10,"#ff00b2ff",ss6)
+us(19,"background",ss6)
+ushsp(false)
+
+fr("$user",user)
+fr("$pass",pass)
+f(user!=null&&pass!=null)
+{
+  us(8,"text",user)
+  us(12,"text",pass)
+}</eventItme>
+
+</UIEventset>

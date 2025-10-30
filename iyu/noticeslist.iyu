@@ -1,0 +1,65 @@
+<View id="1" did="0" type="CardView">
+<ppt>width=-1
+height=125dp
+layout_margin=10dp
+layout_marginTop=5dp
+layout_marginBottom=5dp
+app_CardcornerRadius=6dp
+</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event><eventItme type="clicki">ulag(st_vW,3,title)
+ulag(st_vW,7,content)
+ulag(st_vW,-1,id)
+sr(content,"&lt;br&gt;","\n",content)
+utw(null,title,content,"确定",false,v)
+{
+}</eventItme></event>
+</View>
+<View id="2" did="6" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=通知标题
+textColor=#ff000000
+textStyle=bold
+textSize=18sp
+layout_marginBottom=1dp
+maxLines=1
+layout_marginTop=10dp
+layout_marginLeft=10dp
+ellipsize=end
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="TextView">
+<ppt>width=-1
+height=3
+text=
+BackgroundColor=#ffd6d6d6
+textStyle=bold
+layout_marginLeft=10dp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=暂时没有通知内容
+layout_marginLeft=10dp
+maxLines=5
+ellipsize=end
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

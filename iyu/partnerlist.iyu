@@ -1,0 +1,25 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+layout_marginTop=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=5dp
+gravity=center
+background=#ffffffff</ppt>
+<event><eventItme type="clicki">ulag(st_vW,"-2",url)
+  hws(url)</eventItme></event>
+</View>
+<View id="2" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=广告标题
+textColor=#ff1d1d1d
+textStyle=bold
+textSize=16sp
+maxLines=1
+ellipsize=end</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

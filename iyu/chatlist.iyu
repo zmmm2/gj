@@ -1,0 +1,114 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="9" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="CardView">
+<ppt>width=45dp
+height=45dp
+app_CardBackgroundColor=#FFFFFF
+app_CardcornerRadius=22dp
+app_CardElevation=0dp
+layout_marginLeft=10dp
+layout_marginTop=10dp
+layout_marginRight=8dp</ppt>
+<event></event>
+</View>
+<View id="23" did="10" type="LinearLayout">
+<ppt>width=-1
+background=@touxiang3.png
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="12" did="9" type="TextView">
+<ppt>width=60dp
+height=-2
+text=小蜜蜂
+textSize=13sp
+layout_marginTop=2dp
+layout_marginLeft=2dp
+textColor=#000000
+ut_below=10
+gravity=center
+//layout_marginLeft=10dp
+textSize=10sp
+maxLines=1
+ellipsize=end</ppt>
+<event></event>
+</View>
+<View id="13" did="9" type="CardView">
+<ppt>width=-2
+height=-2
+app_CardBackgroundColor=#ffffffff
+app_CardcornerRadius=5dp
+app_CardElevation=0dp
+layout_marginBottom=10dp
+layout_marginRight=15dp
+layout_marginTop=30dp
+ut_toRightOf=10
+</ppt>
+<event><eventItme type="clicki">ulag(st_vW,12,name)
+ulag(st_vW,15,content)
+ulag(st_vW,17,time)
+ulag(st_vW,-1,id)
+ulag(st_vW,-2,user)
+utw(null,"希望做什么操作","你希望对这条消息做什么操作","复制",false,v)
+{
+  sxb(content)
+  tw("复制成功")
+}</eventItme></event>
+</View>
+<View id="14" did="13" type="RelativeLayout">
+<ppt>width=-2
+height=-2
+padding=8dp</ppt>
+<event><eventItme type="clicki">ulag(st_vW,12,name)
+ulag(st_vW,15,content)
+ulag(st_vW,17,time)
+ulag(st_vW,-1,id)
+ulag(st_vW,-2,user)
+utw(null,"希望做什么操作","你希望对这条消息做什么操作","复制",false,v)
+{
+  sxb(content)
+  tw("复制成功")
+}</eventItme></event>
+</View>
+<View id="15" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=暂无发言，赶紧成为第一个发言者吧!
+ut_centerInParent=true
+textSize=14sp
+textColor=#ff090909
+textColorLink=#ffff002d
+autoLink=web</ppt>
+<event><eventItme type="clicki">ulag(st_vW,12,name)
+ulag(st_vW,15,content)
+ulag(st_vW,17,time)
+ulag(st_vW,-1,id)
+ulag(st_vW,-2,user)
+utw(null,"希望做什么操作","你希望对这条消息做什么操作","复制",false,v)
+{
+  sxb(content)
+  tw("复制成功")
+}</eventItme></event>
+</View>
+<View id="17" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=2003-08-13
+ut_toRightOf=12
+layout_marginTop=16dp
+textSize=10sp
+layout_marginLeft=3dp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

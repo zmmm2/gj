@@ -1,0 +1,122 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=远程通知
+layout_marginBottom=5dp
+layout_marginLeft=15dp
+textSize=20sp
+textColor=#000000
+textStyle=bold
+</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="8" did="6" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="7" did="8" type="ListView">
+<ppt>width=-1
+height=-1
+dividerHeight=0
+visibility=gone
+ut_below=10</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=加载中...
+textColor=#ff535353
+textStyle=bold
+textSize=16sp
+ut_centerInParent=true</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">sss admin="变量-后台账号-变量"
+//后台账号已经自动配置完毕
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+t()
+{
+  ss("http://iap.mx1.ltd/echouser.php?file=notices&admin="+sss.admin+"&pass="+sss.pass,url)
+  hs(url,url)
+  f(url?"["&&url?"]")
+  {
+  ufnsui()
+  {
+    us(7,"visibility","visible")
+    us(9,"visibility","gone")
+  }
+  sj(url,"[",null,url)
+  sl(url,"[",url)
+  for(url;url)
+  {
+    sj(url,null,"#",id)
+    sj(url,"#","|",title)
+    sj(url,"|","]",content)
+    ula(a, 3=title, 7=content, -1=id)
+  ufnsui()
+  {
+    uls(7, a, "noticeslist.iyu", -1, -2)
+  }
+}
+}
+else f(url==null)
+{
+  ufnsui()
+  {
+    us(9,"text","数据加载失败，请重试")
+  }
+}
+else
+{
+  ufnsui()
+  {
+   us(9,"text","后台还没有通知")
+  }
+}
+}
+</eventItme></UIEventset>

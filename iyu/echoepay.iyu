@@ -1,0 +1,201 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=支付详细
+layout_marginBottom=5dp
+layout_marginLeft=15dp
+textSize=20sp
+textColor=#000000
+textStyle=bold
+</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+BackgroundColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="9" did="7" type="TextView">
+<ppt>width=-2
+height=-1
+text=商品名称
+gravity=center
+layout_marginLeft=10dp
+textColor=#ff090909
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="10" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=right</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="TextView">
+<ppt>width=-2
+height=-1
+text=加载中
+layout_marginRight=10dp
+gravity=center
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="8" did="6" type="TextView">
+<ppt>width=-1
+height=2
+text=
+background=#e0e0e0
+layout_marginLeft=10dp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="12" did="6" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="TextView">
+<ppt>width=-2
+height=-1
+text=商品价格
+gravity=center
+layout_marginLeft=10dp
+textColor=#ff090909
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="14" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=right</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="TextView">
+<ppt>width=-2
+height=-1
+text=加载中
+layout_marginRight=10dp
+gravity=center
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="16" did="6" type="TextView">
+<ppt>width=-1
+height=2
+text=
+background=#e0e0e0
+layout_marginLeft=10dp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="17" did="6" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="TextView">
+<ppt>width=-2
+height=-1
+text=会员时间
+gravity=center
+layout_marginLeft=10dp
+textColor=#ff090909
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="19" did="17" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=right
+</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="TextView">
+<ppt>width=-2
+height=-1
+text=加载中
+layout_marginRight=10dp
+gravity=center
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="21" did="6" type="TextView">
+<ppt>width=-1
+height=2
+text=
+background=#e0e0e0
+layout_marginLeft=10dp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="23" did="6" type="Button">
+<ppt>width=-1
+height=45dp
+text=立即购买
+background=#FF444444
+layout_marginTop=5dp
+textColor=#ffffff
+layout_marginTop=10dp
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginBottom=10dp</ppt>
+<event><eventItme type="clicki">t()
+{
+  s user=sss.user
+  sj(sss.id,"epay-",null,id)
+  ss("http://iap.mx1.ltd/epayapi.php?admin="+sss.admin+"&user="+sss.user+"&id="+id,url)
+  hws(url)
+}</eventItme></event>
+</View>
+<View id="24" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=注意:支付完成后需返回网页
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+us(11,"text",sss.name)
+ss(sss.money+"元",sss.money)
+us(15,"text",sss.money)
+sr(sss.vip,"hour","时",time)
+sr(time,"day","天",time)
+sr(time,"month","月",time)
+sr(time,"year","年",time)
+us(20,"text",time)</eventItme></UIEventset>

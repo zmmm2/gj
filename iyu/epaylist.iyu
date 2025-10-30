@@ -1,0 +1,28 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+gravity=center_vertical
+background=white
+layout_marginBottom=1dp
+layout_marginLeft=10dp
+layout_marginRight=10dp</ppt>
+<event><eventItme type="clicki">ulag(st_vW,2,sss.name)
+ulag(st_vW,-1,sss.id)
+ulag(st_vW,-2,sss.money)
+ulag(st_vW,-3,sss.vip)
+uigo("echoepay.iyu")</eventItme></event>
+</View>
+<View id="2" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=商品名
+textColor=#ff080808
+textStyle=bold
+textSize=16sp
+layout_marginLeft=10dp
+maxLines=1
+ellipsize=end</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

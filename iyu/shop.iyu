@@ -1,0 +1,138 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=兑换系统
+layout_marginBottom=5dp
+layout_marginLeft=15dp
+textSize=20sp
+textColor=#000000
+textStyle=bold
+</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="9" did="6" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+layout_marginTop=5dp</ppt>
+<event></event>
+</View>
+<View id="7" did="9" type="ListView">
+<ppt>width=-1
+height=-2
+dividerHeight=0
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="8" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=加载中...
+textColor=#ff535353
+textStyle=bold
+textSize=16sp
+ut_centerInParent=true</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">sss admin="变量-后台账号-变量"
+//后台账号已经自动配置完毕
+sss user="用户账号"
+sss pass="用户密码"
+//用户账号用户密码必须配置
+
+
+
+
+
+
+
+
+
+
+
+//下面不要去改动
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+f(sss.admin=="后台账号")
+{
+  us(9,"text","请配置载入事件信息")
+}
+else
+{
+t()
+{
+  ss("http://iap.mx1.ltd/echouser.php?file=shop&admin="+sss.admin+"&pass="+sss.pass,url)
+  hs(url,url)
+  f(url==null)
+  {
+    ufnsui()
+    {
+      us(8,"text","数据加载失败，请重试")
+    }
+  }
+else f(url=="后台账号不存在"||url=="后台密码错误"||url=="参数不完整")
+{
+  ufnsui()
+  {
+  us(8,"text",url)
+  }
+}
+else f(url=="")
+{
+  ufnsui()
+  {
+    us(8,"text","后台还没有商品")
+  }
+}
+else
+{
+  sj(url,"[",null,url)
+  sl(url,"[",url)
+  for(url;url)
+  {
+    sj(url,"#","|",name)
+    sj(url,null,"#",id)
+    sj(url,"|","||",money)
+    sj(url,"||","]",vip)
+    ula(list, 2=name,-1=id,-2=money,-3=vip)
+    ufnsui()
+    {
+    uls(7, list, "shoplist.iyu", -1, -2)
+    }
+  }
+ufnsui()
+  {
+  us(8,"visibility","gone")
+  us(7,"visibility","visible")
+  }
+}
+}
+}</eventItme></UIEventset>

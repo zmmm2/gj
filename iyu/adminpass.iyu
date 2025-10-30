@@ -1,0 +1,168 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=修改密码
+layout_marginBottom=5dp
+layout_marginLeft=15dp
+textSize=20sp
+textColor=#000000
+textStyle=bold
+</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="9" did="6" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+layout_margin=10dp
+layout_marginTop=20dp</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="RelativeLayout">
+<ppt>width=-1
+height=55dp</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="12" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+background=
+singleline=true
+hint=输入原密码
+textsize=15dp
+textcolor=#5f000000
+textcolorhint=#5f000000
+//inputtype=textpassword
+layout_weight=1
+maxLength=18</ppt>
+<event></event>
+</View>
+<View id="8" did="12" type="TextView">
+<ppt>width=-1
+height=2
+text=
+background=#e0e0e0</ppt>
+<event></event>
+</View>
+<View id="20" did="6" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+layout_margin=10dp
+layout_marginTop=0dp</ppt>
+<event></event>
+</View>
+<View id="21" did="20" type="RelativeLayout">
+<ppt>width=-1
+height=55dp</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+background=
+singleline=true
+hint=输入新密码
+textsize=15dp
+textcolor=#5f000000
+textcolorhint=#5f000000
+inputtype=textpassword
+layout_weight=1
+maxLength=18</ppt>
+<event></event>
+</View>
+<View id="24" did="22" type="TextView">
+<ppt>width=-1
+height=2
+text=
+background=#e0e0e0</ppt>
+<event></event>
+</View>
+<View id="10" did="6" type="Button">
+<ppt>width=-1
+height=45dp
+text=确定修改
+background=#FF444444
+layout_marginTop=5dp
+textColor=#ffffff
+layout_marginTop=10dp
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginBottom=10dp</ppt>
+<event><eventItme type="clicki">ug(7,"text",pass)
+ug(23,"text",newpass)
+s user=sss.user
+t()
+{
+  ss("http://iap.mx1.ltd/userpass.php?admin="+sss.admin+"&user="+user+"&pass="+pass+"&newpass="+newpass,url)
+  hs(url,url)
+  ufnsui()
+  {
+    tw(url)
+  }
+f(url?"成功")
+{
+  sss pass=pass
+}
+}</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">sss admin="变量-后台账号-变量"
+//后台账号已经自动配置完毕
+sss user="用户账号"
+//用户账号用户密码必须配置
+
+
+
+
+
+
+
+
+
+
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+</eventItme></UIEventset>
