@@ -1,0 +1,27 @@
+<?php
+$user=$_GET['user'];
+$pass=$_GET['pass'];
+$name=$_GET['name'];
+$money=$_GET['money'];
+$mini=$_GET['mini'];
+$max=$_GET['max'];
+$id=$_GET['id'];
+$time=$_GET['time'];
+require 'test_test.php';
+if(is_dir('userss/'.$user)&&$user!=''){
+if($pass==file_get_contents('userss/'.$user.'/admin/passprotect556')){
+if($name!=''&&$money!=''&&$mini!=''&&$max!=''&&$id!=''&&$time!=''){
+if(file_exists('userss/'.$user.'/admin/data/luckvip')){
+$a='['.$id.'#'.$name.'|'.$money.'||'.$mini.'|||'.$max.'||||'.$time.']';
+$b=file_get_contents('userss/'.$user.'/admin/data/luckvip');
+if(strpos($b,$a)!==false){
+$c=str_replace($a,'',$b);
+file_put_contents('userss/'.$user.'/admin/data/luckvip',$c);
+echo '删除成功';
+}else{echo '商品不存在';}
+}else{echo '后台无抽奖商品';}
+}else{echo '请输入完整';}
+}else{echo '密码错误';}
+}else{echo '后台账号不存在';}
+//格式:[ID#商品名|抽奖花费||最小奖励|||最大奖励|||时间单位]
+?>
